@@ -1,4 +1,5 @@
 #include <person.h>      // why "" instead of <>??
+#include <iostream>
 
 Person::Person()
 {
@@ -17,6 +18,12 @@ Person::Person(int start_id, std::string start_fname, std::string start_lname)
 	last_name = start_lname;
 	hourly_rate = 0.0f;
 	hours_worked = 0;
+}
+
+Person::~Person()
+{
+	// We didn't allocate any resources so no code is necessary
+	std::cout << "Person '" << first_name << " " << last_name << "' is about to die!\n";
 }
 
 int Person::get_id()

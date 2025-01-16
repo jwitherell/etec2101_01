@@ -30,7 +30,7 @@ int main()
 
     cout << "x=" << x << "abc" << "Hello World!\n";*/
 
-    // Some code that uses the Person class
+    // Some code that uses the Person class (defined STATICALLY)
     Person p(42, "Bob", "Jones");
     Person q(43, "Sally", "Smith");
 
@@ -39,6 +39,17 @@ int main()
     q.set_hourly_rate(16.75f);
     q.set_hours_worked(42);
 
-    std::cout << p.get_id() << " " << p.get_first_name();
+    // We can also DYNAMICALLY allocate a person object
+    Person* pptr = new Person(44, "Eric", "Davis");     // like malloc (new is preferred
+                                                        //   b/c it works with Classes)
+    pptr->set_hourly_rate(12.15f);
+    pptr->set_hours_worked(23);
+    (*pptr).set_hourly_rate(12.35f);        // Same as line 45, but uglier
+
+    delete pptr;                            // Like free -- frees up the memory
+                                            //  pptr points to.
+
+
+    std::cout << p.get_id() << " " << p.get_first_name() << "\n";
 }
 

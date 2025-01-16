@@ -23,6 +23,9 @@ public:
 
 	Person(int starting_id, std::string start_fname, std::string start_lname);
 	
+	// Destructor (called when an instance is about to be destroyed)
+	~Person();     // Always has the name of the class.  Only one!!
+
 	// GETTER methods
 	int get_id();
 	std::string get_first_name();

@@ -85,7 +85,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\examples\person.cpp" />
-    <ClCompile Include="..\..\src\file_io_example.cpp" />
+    <ClCompile Include="..\..\src\oop_basics_example.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\examples\person.h" />

@@ -85,11 +85,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\example\foo.cpp" />
+    <ClCompile Include="..\..\src\example\person.cpp" />
     <ClCompile Include="..\..\src\friend_example.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\examples\person.h" />
     <ClInclude Include="..\..\include\example\foo.h" />
+    <ClInclude Include="..\..\include\example\person.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

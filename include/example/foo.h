@@ -25,7 +25,11 @@ namespace example
 
 		void some_method();
 
-		friend void func();
+		friend void func(Foo& fref);	// We are giving this function (in the
+										// example namespace) normally unauthorized
+										// access to our attributes
+
+
 		friend class AnotherClass;		// This class is defined
 										// elsewhere and in all methods,attributes,
 										// etc. IT has access to private things
@@ -41,13 +45,19 @@ namespace example
 		}
 
 
+		// This is making a function (like below) that is outside the
+		// class, but has ALL access.
 		friend Foo operator+(int i, Foo& right_foo)
 		{
-			return right_foo + i;
+			Foo return_val;
+			// We wouldn't be able to do the following line if we were a 
+			// normal function, but can since we're a friend
+			return_val.age = right_foo.age + i;
+			return return_val;
 		}
 	};
 
 
-	// Make a FUNCTION to do "reverse add"
-	//Foo operator+(int i, Foo right_foo);
+	// Make a FUNCTION to do "reverse subtract"
+	Foo operator-(int i, Foo right_foo);
 }

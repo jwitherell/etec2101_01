@@ -2,9 +2,8 @@
 
 namespace example
 {
-	void func()
+	void func(Foo& fref)
 	{
-		example::Foo fref;
 		fref.age++;		// Can't NORMALLY do this, but the friend statement 
 						// allows it.
 	}
@@ -19,6 +18,6 @@ int main(int argc, char** argv)
 
 	example::Foo g = f + 2;
 	example::Foo h = 2 + f;
-	example::func();
+	example::func(g);
 	return 0;
 }

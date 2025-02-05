@@ -40,9 +40,16 @@ example::Foo example::Foo::operator+(int i)
 
 
 // This is a FUNCTION, not a method!
-/*example::Foo example::operator+(int i, example::Foo right_foo)
+example::Foo example::operator-(int i, example::Foo right_foo)
 {
-	// We want to make addition commutative here, so I just call the
-	// method we have in the Foo class
-	return right_foo + i;
-}*/
+	// We want to do something like this, but we don't have access
+	// to the private memebers of right_foo, so can't
+	//Foo return_value;
+	//return_value.name = right_foo.name;
+	//return_value.age = right_foo.age + i;
+	//return return_value;
+
+	// We can, however, use any public methods of right_foo, like the *other*
+	// plus operator, like this: 
+	return right_foo + (-i);
+}

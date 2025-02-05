@@ -46,4 +46,6 @@ int main(int argc, char** argv)
 
     cout << "Hey";
     std::cout << p.get_id() << " " << p.get_first_name() << "\n";
+
+    // We'll get started again at 1:05pm
 }

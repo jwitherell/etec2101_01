@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['calculate_5fwage_0',['calculate_wage',['../classexample_1_1_person.html#a0a936ded69e39ce35f0dfa1cbe8a1c15',1,'example::Person']]]
+  ['add_5fperson_0',['add_person',['../classexample_1_1_person_database.html#ab257ce8a2114416c72a6d87d363ab477',1,'example::PersonDatabase']]]
 ];

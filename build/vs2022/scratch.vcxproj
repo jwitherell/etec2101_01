@@ -86,7 +86,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\example\foo.cpp" />
     <ClCompile Include="..\..\src\example\person.cpp" />
-    <ClCompile Include="..\..\src\friend_example.cpp" />
+    <ClCompile Include="..\..\src\example\vector_iterator_example.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\example\foo.h" />

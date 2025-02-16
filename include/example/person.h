@@ -55,7 +55,7 @@ namespace example
 		/// <summary>
 		/// This is a constructor that takes initial values for most of the attributes
 		/// </summary>
-		Person(std::string starting_fname, std::string starting_lname, unsigned int id, float starting_rate);
+		Person(const std::string& starting_fname, const std::string& starting_lname, unsigned int id, float starting_rate);
 
 	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	//@ GETTERS / SETTERS               @

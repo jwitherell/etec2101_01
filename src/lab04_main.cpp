@@ -37,6 +37,24 @@ public:
 
 int main(int argc, char** argv)
 {
+	// User's view
+	WordReader WR("..\\..\\..\\media\\scowl.txt");
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << WR.getWord() << "\n";
+	}
+
+	// Internal in WordReader
+	// 1. Constructor should open file in binary mode.  Gets the file
+	//      length (in bytes), saves as an attribute
+	//     - fp.seekg(0, std::ios::end);
+	//     - fp.tellg();
+	// 2. getWord()
+	//      a. Go to random byte location
+	//      b. Adjust till we're at newline boundary
+	//      c. call std::getline to read the line and return it.
+
+
 	// This code is run before the game starts.  Note how SFML is very object-oriented (creating
 	// objects and calling methods) rather than SDL, which is very C based (mostly calling functions
 	// and passing around structs)
@@ -148,6 +166,7 @@ int main(int argc, char** argv)
 			temp.set_text(s);
 			// Draw temp.
 			temp.draw(window);
+			// Resume @ 1:30pm
 		}
 
 		window.display();// Shows our drawings

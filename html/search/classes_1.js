@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['foo_0',['Foo',['../classexample_1_1_foo.html',1,'example']]]
+  ['bullet_0',['Bullet',['../classexample_1_1_bullet.html',1,'example']]]
 ];
